@@ -2,6 +2,7 @@ import consoleMethods from './consoleMethods';
 import LogEntry from './LogEntry';
 
 export interface ILogCatcher {
+  dispose(): void;
   getLog(): LogEntry[];
   onUpdate(fn: () => void): () => void;
 }
@@ -38,7 +39,9 @@ export default class LogCatcher implements ILogCatcher {
 
   onUpdate(fn: () => void) {
     this._handlers.add(fn);
-    return () => this._handlers.delete(fn);
+    return () => {
+        this._handlers.delete(fn)
+    };
   }
 
   dispose() {

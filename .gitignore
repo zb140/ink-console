@@ -27,3 +27,5 @@ environment.toml
 .env
 
 package-lock.json
+
+.npmrc

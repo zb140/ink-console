@@ -1,4 +1,6 @@
-import {h, Component, Text} from 'ts-ink';
+import { createElement, Component } from 'react';
+
+import { Color } from 'ink';
 
 let obj: any = {v: 42};
 
@@ -6,33 +8,33 @@ let obj: any = {v: 42};
  * A simple example of an ink component
  */
 export default class Counter extends Component<{}, {i: number}> {
-  state = {
-    i: 0,
-  };
-  timer: any;
+    state = {
+        i: 0,
+    };
+    timer: any;
 
-  componentDidMount() {
-    this.timer = setInterval(() => {
-      console.log(this.state.i + 1);
-      console.dir(obj);
-      obj = {v: [obj]};
-      this.setState({
-        i: this.state.i + 1,
-      });
-    }, 500);
-  }
-
-  componentWillUnmount() {
-    if (this.timer != null) {
-      clearInterval(this.timer);
+    componentDidMount() {
+        this.timer = setInterval(() => {
+            console.log(this.state.i + 1);
+            console.dir(obj);
+            obj = {v: [obj]};
+            this.setState({
+                i: this.state.i + 1,
+            });
+        }, 500);
     }
-  }
 
-  render() {
-    return (
-      <Text green>
-        {this.state.i} tests passed
-      </Text>
-    );
-  }
+    componentWillUnmount() {
+        if (this.timer != null) {
+            clearInterval(this.timer);
+        }
+    }
+
+    render() {
+        return (
+            <Color green>
+                {this.state.i} tests passed
+            </Color>
+        );
+    }
 }

@@ -1,4 +1,5 @@
-import {h, render} from 'ts-ink';
+import { createElement } from 'react';
+import { render } from 'ink';
 import Console from './';
 import Counter from './Counter';
 
