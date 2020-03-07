@@ -1,5 +1,5 @@
 {
-  "name": "ink-console",
+  "name": "@zb140/ink-console",
   "version": "1.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
