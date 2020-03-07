@@ -60,11 +60,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ForbesLindesay/ink-console.git"
+    "url": "https://github.com/zb140/ink-console.git"
   },
   "author": {
-    "name": "Forbes Lindesay",
-    "url": "http://github.com/ForbesLindesay"
+    "name": "Zach Bean",
+    "url": "http://github.com/zb140"
   },
   "license": "MIT"
 }
